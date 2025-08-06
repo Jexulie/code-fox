@@ -1,2 +1,5 @@
-- [Cobra](https://github.com/spf13/cobra)
-- [Viper](https://github.com/spf13/viper)
+# Code-Fox
+
+CLI tool for code snippet management
+
+---
