@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@plugin './hero.ts';
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+
+:root {
+    --text-primary: #333; /* Light mode default */
+    --background: #fff;
+}
+
+/*@media (prefers-color-scheme: dark) {*/
+/*    :root {*/
+/*        --text-primary: #fff; !* Dark mode text *!*/
+/*        --background: #222;*/
+/*    }*/
+/*}*/
+
+html {
+    background-color: rgba(27, 38, 54, 1);
+    /*text-align: center;*/
+    /*color: white;*/
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    color: var(--text-primary);
+    background: var(--background);
+}
+
+@font-face {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+    url("assets/fonts/nunito-v16-latin-regular.woff2") format("woff2");
+}
+
+#app {
+    height: 100vh;
+    text-align: center;
+}
