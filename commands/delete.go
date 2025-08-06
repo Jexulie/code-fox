@@ -22,8 +22,10 @@ var deleteCmd = &cobra.Command{
 			fmt.Println("invalid id")
 		}
 
-		snip := snippet.Snippet{
-			Id: idValue,
+		snip, err := snippet.GetById(idValue)
+		if err != nil {
+			fmt.Println("snippet not found")
+			return
 		}
 
 		if err := snip.Delete(); err != nil {

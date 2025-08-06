@@ -8,9 +8,11 @@ import (
 	"strconv"
 )
 
-/**
+/*
+*
 Edits snippet - cmd "edit"
 */
+var titleValue string
 
 var editCmd = &cobra.Command{
 	Use:   "edit [id]",
@@ -32,6 +34,10 @@ var editCmd = &cobra.Command{
 
 		if codeValue == "" && filePathValue != "" {
 			getCodeFromFile()
+		}
+
+		if titleValue != "" {
+			snip.Title = titleValue
 		}
 
 		if languageValue != "" {
@@ -82,4 +88,5 @@ func addEditCmdFlags() {
 	editCmd.Flags().StringVarP(&descriptionValue, "desc", "d", "", "The description of the snippet")
 	editCmd.Flags().StringVarP(&filePathValue, "file", "f", "", "The file name of the snippet with it's extension")
 	editCmd.Flags().StringVarP(&codeValue, "code", "c", "", "The code of the snippet")
+	editCmd.Flags().StringVarP(&titleValue, "title", "n", "", "The title of the snippet")
 }

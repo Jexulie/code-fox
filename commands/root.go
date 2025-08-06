@@ -33,4 +33,6 @@ func init() {
 	addEditCmdFlags()
 
 	RootCmd.AddCommand(deleteCmd)
+
+	RootCmd.AddCommand(executeCmd)
 }
