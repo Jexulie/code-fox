@@ -15,6 +15,9 @@ var deleteCmd = &cobra.Command{
 	Use:   "delete [id]",
 	Short: "Delete a snippet by id",
 	Long:  "Delete a snippet by id",
+	Aliases: []string{
+		"d",
+	},
 	Run: func(cmd *cobra.Command, args []string) {
 		idStrValue := args[0]
 		idValue, err := strconv.ParseInt(idStrValue, 10, 64)

@@ -25,6 +25,9 @@ var listCmd = &cobra.Command{
 	Use:   "list",
 	Short: "List all snippets",
 	Long:  "List all snippets",
+	Aliases: []string{
+		"l",
+	},
 	Run: func(cmd *cobra.Command, args []string) {
 
 		snippets, err := snippet.GetSnippets(tagValue)

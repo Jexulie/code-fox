@@ -31,6 +31,9 @@ var saveCmd = &cobra.Command{
 	Short: "Create a code snippet",
 	Long:  `save a code snippet or a file relative to current directory.`,
 	Args:  cobra.ExactArgs(1),
+	Aliases: []string{
+		"s",
+	},
 	PreRunE: func(cmd *cobra.Command, args []string) error {
 		// validate either code or file provided
 		if codeValue == "" && filePathValue == "" {

@@ -18,6 +18,9 @@ var editCmd = &cobra.Command{
 	Use:   "edit [id]",
 	Short: "Edits snippet by id",
 	Args:  cobra.ExactArgs(1),
+	Aliases: []string{
+		"ed",
+	},
 	Run: func(cmd *cobra.Command, args []string) {
 		idStrValue := args[0]
 		idValue, err := strconv.ParseInt(idStrValue, 10, 64)

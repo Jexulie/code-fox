@@ -16,6 +16,9 @@ var getCmd = &cobra.Command{
 	Short: "Gets snippet by id or title",
 	Long:  "Gets snippet by id or title",
 	Args:  cobra.ExactArgs(1),
+	Aliases: []string{
+		"g",
+	},
 	Run: func(cmd *cobra.Command, args []string) {
 		var snip *snippet.Snippet
 

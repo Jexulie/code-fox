@@ -18,6 +18,9 @@ var executeCmd = &cobra.Command{
 	Short: "Execute a snippet by id",
 	Long:  `Execute a snippet by id.`,
 	Args:  cobra.MinimumNArgs(1),
+	Aliases: []string{
+		"e",
+	},
 	Run: func(cmd *cobra.Command, args []string) {
 		idStrValue := args[0]
 		idValue, err := strconv.ParseInt(idStrValue, 10, 64)
