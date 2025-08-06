@@ -18,6 +18,7 @@ var deleteCmd = &cobra.Command{
 	Aliases: []string{
 		"d",
 	},
+	Example: "codefox delete 13",
 	Run: func(cmd *cobra.Command, args []string) {
 		idStrValue := args[0]
 		idValue, err := strconv.ParseInt(idStrValue, 10, 64)

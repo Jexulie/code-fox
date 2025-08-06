@@ -28,6 +28,7 @@ var listCmd = &cobra.Command{
 	Aliases: []string{
 		"l",
 	},
+	Example: "codefox list",
 	Run: func(cmd *cobra.Command, args []string) {
 
 		snippets, err := snippet.GetSnippets(tagValue)

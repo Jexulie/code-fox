@@ -34,6 +34,7 @@ var saveCmd = &cobra.Command{
 	Aliases: []string{
 		"s",
 	},
+	Example: "codefox save \"Curl get my-site\" -l=bash -t=curl,command -c=\"curl -L my-site.com\" -d=\"Curl get command to my-site\"",
 	PreRunE: func(cmd *cobra.Command, args []string) error {
 		// validate either code or file provided
 		if codeValue == "" && filePathValue == "" {

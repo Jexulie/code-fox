@@ -19,6 +19,7 @@ var getCmd = &cobra.Command{
 	Aliases: []string{
 		"g",
 	},
+	Example: "codefox get 42",
 	Run: func(cmd *cobra.Command, args []string) {
 		var snip *snippet.Snippet
 

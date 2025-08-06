@@ -21,6 +21,7 @@ var editCmd = &cobra.Command{
 	Aliases: []string{
 		"ed",
 	},
+	Example: "codefox edit 42 -d=\"updated description\"",
 	Run: func(cmd *cobra.Command, args []string) {
 		idStrValue := args[0]
 		idValue, err := strconv.ParseInt(idStrValue, 10, 64)

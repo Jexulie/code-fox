@@ -21,6 +21,7 @@ var executeCmd = &cobra.Command{
 	Aliases: []string{
 		"e",
 	},
+	Example: "codefox execute 23",
 	Run: func(cmd *cobra.Command, args []string) {
 		idStrValue := args[0]
 		idValue, err := strconv.ParseInt(idStrValue, 10, 64)
